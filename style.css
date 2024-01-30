@@ -1,9 +1,30 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
 body
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #B91450;
+    background-color: #B91450; 
+    /* background-image:url(https://www.bing.com/images/blob?bcid=RN.OpYYTtJ0GqxcxoNWLuD9SqbotqVTdP6A);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    gap: 20px;
+    
+    
+}
+h1
+{
+    color: white;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-top: 15px;
 }
 form
 {
@@ -12,6 +33,7 @@ form
     border-radius: 10px;
     background-color: white;
     box-shadow: 10px 10px 10px #00000059;
+    color: #B91450;
 }
 .container-label
 {
@@ -31,4 +53,62 @@ form
 {
     display: flex;
     justify-content: center;
+}
+#bottone button
+{
+    color: #B91450;
+    background-color: #CCCCCC;
+    border: #CCCCCC;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+#bottone button:hover
+{
+    border:5px solid lightcoral;
+}
+h2
+{
+    color: white;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+#container-biglietto-treno
+{
+    display: flex;
+    width: 70%;
+    background-color: white;
+    flex-direction: column;
+    padding: 15px;
+}
+h3{margin-top: 10px;
+    text-transform: uppercase;}
+#biglietto-treno
+{
+    display: flex;
+    border-top:2px solid #808080;
+    border-bottom:2px solid #808080;
+    height: 75px;
+    
+    
+}
+#nome-utente
+{
+    background-color: #808080;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.elementi
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 17.5%;
+    align-items: center;
+    padding: 5px;
 }

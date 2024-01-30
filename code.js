@@ -12,8 +12,11 @@ const buttonElement = document.querySelector("#pulsante");
 // stringa da ricordare a memoria , usata per inserire un controllo continuo sul bottone e si attivera solo se premuto il bottone
 buttonElement.addEventListener("click" , 
 function()
-{
+{   
+    // inserito value perchè abbiamo un valore
     const km = document.getElementById("km").value;
+    // text.content perchè noi vogliamo prendere il valore del nome
+    const nome = document.getElementById("nome").value;
     
     const eta = document.getElementById("eta").value;
     // abbiamo inserito una and perchè vogliamo che tutte le nostre condizioni siano vere per andare avanti e il not fuori perchè andremo avanti qaundo queste condizioni saranno vere
@@ -43,7 +46,8 @@ function()
         Costo_biglietto = Number ((costo_tratta - ((costo_tratta * sconto_over)/ 100 ) ));
         // parseFloat viene usato in questo caso insieme ad to.fixed(2) perchè fixed restituisce una stringa con 2 valori decimali e parse lo traforma in numero nuovamente
         Costo_biglietto = parseFloat(Costo_biglietto.toFixed(2));
-        document.getElementById("Costo_biglietto").innerHTML = `Questo è quanto spendi ${Costo_biglietto}`;
+        document.getElementById("Costo_biglietto").innerHTML = `${Costo_biglietto}€`;
+        document.getElementById("tipo-biglietto").innerText = `sconto over`;
         
     }
     // secondo snodo della nostra condizione
@@ -52,16 +56,18 @@ function()
         Costo_biglietto = Number ((costo_tratta - ((costo_tratta * sconto_under)/ 100 ) ));
         // parseFloat viene usato in questo caso insieme ad to.fixed(2) perchè fixed restituisce una stringa con 2 valori decimali e parse lo traforma in numero nuovamente
         Costo_biglietto = parseFloat(Costo_biglietto.toFixed(2));
-        document.getElementById("Costo_biglietto").innerHTML = `Questo è quanto spendi ${Costo_biglietto}`;
-        
+        document.getElementById("Costo_biglietto").innerHTML = `${Costo_biglietto}€`;
+        document.getElementById("tipo-biglietto").innerText = `sconto under`;
     }
     // terzo snodo della nostra condizione
     else
     {
         Costo_biglietto = Number (costo_tratta) ;
-        document.getElementById("Costo_biglietto").innerHTML = `Questo è quanto spendi ${Costo_biglietto}`;
+        document.getElementById("Costo_biglietto").innerHTML = `${Costo_biglietto}€`;
+        document.getElementById("tipo-biglietto").innerText = `standard`;
     }
     console.log(Costo_biglietto)
+    document.getElementById("nome").innerText = `${nome}`;
  
     }
     

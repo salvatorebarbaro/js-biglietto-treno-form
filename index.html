@@ -13,6 +13,10 @@
     <form action="" method="post">
         <div class="container-label">
             <div class="container km">
+                <label for="nome-cognome">inserisci il tuo nome e cognome:</label>
+                <input type="text" id="nome" name="nome-passegero" required>
+            </div>
+            <div class="container km">
                 <label for="km">Inserisci km da percorrere:</label>
                 <input type="number" id="km" name="km_biglietto" required>
             </div>
@@ -27,6 +31,33 @@
             <button id="pulsante" type="button">Genera</button>
         </div>
     </form>
+    <h2>Il tuo biglietto</h2>
+    <div id="container-biglietto-treno">
+        <h3>Dettaglio Passeggeri</h3>
+        <div id="biglietto-treno">
+            <div id="nome-utente" >
+                <div><strong>Nome passeggero</strong></div>
+                <div id="nome"></div>
+            </div>
+            <div class="elementi">
+                <div><strong>Offerta</strong></div>
+                <div id="tipo-biglietto"></div>
+            </div>
+            <div class="elementi">
+                <div><strong>Carrozza</strong></div>
+                <div>5</div>
+            </div>
+            <div class="elementi">
+                <div><strong>Codice Cp</strong></div>
+                <div>92911</div>
+            </div>
+            <div class="elementi">
+                <div><strong>Costo Biglietto</strong></div>
+                <div id="Costo_biglietto"></div>
+            </div>
+        </div>
+
+    </div>
     
     <script src="./code.js"></script>
 </body>
