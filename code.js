@@ -67,7 +67,7 @@ function()
         document.getElementById("tipo-biglietto").innerText = `standard`;
     }
     console.log(Costo_biglietto)
-    document.getElementById("nome").innerText = `${nome}`;
+    document.getElementById("nome-biglietto").innerText = `${nome}`;
  
     }
     
